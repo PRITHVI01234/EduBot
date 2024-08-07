@@ -19,7 +19,7 @@ header = st.empty()
 header.title("Edu-Bot: Your Personalized Educational Assistant 🎓")
 
 # Login functionality
-__login__obj = __login__(auth_token= st.secrets['Courier'],
+__login__obj = __login__(auth_token=st.secrets['Courier'],
                          company_name="Edu-Bot: A Personalized Educational Assistant",
                          width=300, height=350,
                          logout_button_name='Logout', hide_menu_bool=True,
@@ -54,6 +54,8 @@ if LOGGED_IN:
         st.session_state.chat_started = False
     if "response" not in st.session_state:
         st.session_state.response = None
+    if "rerun_triggered" not in st.session_state:
+        st.session_state.rerun_triggered = False
 
     # Function to create system prompt
     def create_system_prompt(user_info):
@@ -95,11 +97,12 @@ if LOGGED_IN:
                 if st.button("Start a New Session 🔄"):
                     st.session_state.chat_started = False
                     st.session_state.messages = []
+                    st.session_state.rerun_triggered = False
                     st.rerun()
             with st.container(border=True):
-             if lottie_robot:
-                st_lottie(lottie_robot, height=200, key="robot")
-                st.error("Did you know fear drives AI confinement? 😱")
+                if lottie_robot:
+                    st_lottie(lottie_robot, height=200, key="robot")
+                    st.error("Did you know fear drives AI confinement? 😱")
             st.markdown("---")
             st.markdown("**Made with ❤️ by Your Amazing Team [ERROR 404]**")
 
@@ -159,6 +162,7 @@ if LOGGED_IN:
                     }
                     st.session_state.chat_started = True
                     st.session_state.messages.append({"role": "assistant", "content": f"Hi {name} 👋! Let's start your personalized learning experience, shall we? 🎓🚀"})
+                    st.session_state.rerun_triggered = False
                     st.rerun()
                 else:
                     st.warning("Please fill in all required fields (Name, Interests, and Career Aspiration).")
@@ -183,9 +187,8 @@ if LOGGED_IN:
             st.rerun()
 
     def chat_page():
-        
         if st.session_state.response != "Lets go":
-         pop_up()
+            pop_up()
 
         sidebar_content()
 
@@ -226,4 +229,8 @@ if LOGGED_IN:
     if not st.session_state.chat_started:
         user_input_page()
     else:
-        chat_page()
+        if not st.session_state.rerun_triggered:
+            st.session_state.rerun_triggered = True
+            st.rerun()
+        else:
+            chat_page()
