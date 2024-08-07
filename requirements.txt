@@ -3,3 +3,4 @@ trycourier
 streamlit-login-auth-ui
 ai71
 streamlit-lottie
+typing_extensions==4.3.0
