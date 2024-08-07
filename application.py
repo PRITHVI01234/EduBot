@@ -31,6 +31,7 @@ LOGGED_IN = __login__obj.build_login_ui()
 if LOGGED_IN:
     # Set the API key
     header.empty()
+    st.rerun()
     AI71_API_KEY = st.secrets['LLM']
     client = AI71(AI71_API_KEY)
 
