@@ -51,7 +51,7 @@ psutil==5.9.1
 pure-eval==0.2.2
 pyarrow==9.0.0
 pycparser==2.21
-pydeck==0.7.1
+pydeck
 Pygments==2.13.0
 Pympler==1.0.1
 pyparsing==3.0.9
