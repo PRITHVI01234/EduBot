@@ -6,6 +6,10 @@
 
 EduBot is your personalized AI-powered educational assistant, developed for the Falcon Hackathon.
 
+## 🌐 Live Demo
+
+Try EduBot now: [EduBot Live Demo](https://your-deployment-url-here.com)
+
 ## 🌟 Features
 
 - 🧠 Personalized learning experience
