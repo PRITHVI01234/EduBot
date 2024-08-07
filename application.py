@@ -173,7 +173,7 @@ if LOGGED_IN:
                 st.warning("Did You Know 🤔: The American flag has 50 stars and 13 stripes.")
 
     # Chat Page
-    @st.experimental_dialog("Terms and Condition 🧑‍🏫", width="large")
+    @st.dialog("Terms and Condition 🧑‍🏫", width="large")
     def pop_up():
         st.markdown("Please understand that this application is under development and it doesn't have strict guardrails or a setup that makes it stick to the context, so please use it with caution and responsibly.")
         lets_do_that = st.button("Ok 👍")
