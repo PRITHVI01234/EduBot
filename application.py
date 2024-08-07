@@ -19,7 +19,7 @@ header = st.empty()
 header.title("Edu-Bot: Your Personalized Educational Assistant 🎓")
 
 # Login functionality
-__login__obj = __login__(auth_token="pk_prod_VFHMXS2AJM4SHQJZBFCMM28DFJ0Z",
+__login__obj = __login__(auth_token= st.secrets['Courier'],
                          company_name="Edu-Bot: A Personalized Educational Assistant",
                          width=300, height=350,
                          logout_button_name='Logout', hide_menu_bool=False,
@@ -31,7 +31,7 @@ LOGGED_IN = __login__obj.build_login_ui()
 if LOGGED_IN:
     # Set the API key
     header.empty()
-    AI71_API_KEY = "api71-api-a146e7d9-b35c-4961-ad48-4fcdfb33277e"
+    AI71_API_KEY = st.secrets['LLM']
     client = AI71(AI71_API_KEY)
 
     # Function to load Lottie animations
