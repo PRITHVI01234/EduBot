@@ -52,8 +52,8 @@ if LOGGED_IN:
         st.session_state.messages = []
     if "chat_started" not in st.session_state:
         st.session_state.chat_started = False
-    # if "response" not in st.session_state:
-    #     st.session_state.response = None
+    if "response" not in st.session_state:
+        st.session_state.response = None
 
     # Function to create system prompt
     def create_system_prompt(user_info):
@@ -172,20 +172,20 @@ if LOGGED_IN:
                 st_lottie(lottie_education, height=400, key="education")
                 st.warning("Did You Know 🤔: The American flag has 50 stars and 13 stripes.")
 
-    # # Chat Page
-    # @st.dialog("Terms and Condition 🧑‍🏫", width="large")
-    # def pop_up():
-    #     st.markdown("Please understand that this application is under development and it doesn't have strict guardrails or a setup that makes it stick to the context, so please use it with caution and responsibly.")
-    #     lets_do_that = st.button("Ok 👍")
+    # Chat Page
+    @st.dialog("Terms and Condition 🧑‍🏫", width="large")
+    def pop_up():
+        st.markdown("Please understand that this application is under development and it doesn't have strict guardrails or a setup that makes it stick to the context, so please use it with caution and responsibly.")
+        lets_do_that = st.button("Ok 👍")
 
-    #     if lets_do_that:
-    #         st.session_state.response = "Lets go"
-    #         st.rerun()
+        if lets_do_that:
+            st.session_state.response = "Lets go"
+            st.rerun()
 
     def chat_page():
         
-        # if st.session_state.response != "Lets go":
-        #  pop_up()
+        if st.session_state.response != "Lets go":
+         pop_up()
 
         sidebar_content()
 
