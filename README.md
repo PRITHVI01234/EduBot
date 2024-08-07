@@ -1,38 +1,42 @@
-EduBot: Your Personalized Educational Assistant
-Created for the Falcon Hackathon
-This application was developed specifically for the Falcon Hackathon, leveraging the powerful LLM API provided by the Falcon team. EduBot is designed to be your personal AI-driven educational companion, tailoring its responses to your individual learning needs and preferences.
-Key Features
+# EduBot 🤖📚
 
-Personalized Learning Experience: EduBot adapts to each user's age, education level, interests, and learning style.
-Secure Account Management:
+[![Falcon Hackathon](https://img.shields.io/badge/Falcon-Hackathon-blue)](https://falconllm.tii.ae/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 
-Robust account creation process
-Secure login credentials
-Password reset capabilities
+EduBot is your personalized AI-powered educational assistant, developed for the Falcon Hackathon.
 
+## 🌟 Features
 
-Interactive Chat Interface: Engage in educational conversations with our AI assistant.
-Dynamic Content Generation: Utilizes the Falcon LLM API to generate relevant and informative responses.
+- 🧠 Personalized learning experience
+- 🔒 Secure account management
+- 💬 Interactive chat interface
+- 🚀 Dynamic content generation using Falcon LLM API
 
-Security
-We take user privacy and data security seriously. Our application features:
+## 🛠️ Technologies
 
-Secure account creation
-Encrypted login credentials
-Safe password resetting capabilities
+- Streamlit
+- Falcon LLM API
+- streamlit-login-auth-ui
 
-These measures ensure that your personal information and learning journey remain protected.
-Technologies Used
+## 🔐 Security
 
-Streamlit for the web interface
-Falcon LLM API for AI-powered responses
-Streamlit-login-auth-ui for secure authentication
+- Secure account creation
+- Encrypted login credentials
+- Password reset functionality
 
-Getting Started
-[Include instructions on how to set up and run the application locally]
-Disclaimer
-This application is a prototype developed for the Falcon Hackathon. While we strive for accuracy and reliability, please use it responsibly and be aware that it is still under development.
-Acknowledgements
-Special thanks to the Falcon team for providing the LLM API that powers our educational assistant.
-Team
-Developed with ❤️ by Team [ERROR 404] for the Falcon Hackathon.
+## ⚠️ Disclaimer
+
+This is a prototype developed for the Falcon Hackathon. Use responsibly.
+
+## 🙏 Acknowledgements
+
+Thanks to the Falcon team for providing the LLM API.
+
+## 👥 Team
+
+Developed by Team [ERROR 404]
+
+---
+
+Made with ❤️ for the Falcon Hackathon
