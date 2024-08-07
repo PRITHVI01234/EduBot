@@ -22,8 +22,8 @@ header.title("Edu-Bot: Your Personalized Educational Assistant 🎓")
 __login__obj = __login__(auth_token= st.secrets['Courier'],
                          company_name="Edu-Bot: A Personalized Educational Assistant",
                          width=300, height=350,
-                         logout_button_name='Logout', hide_menu_bool=False,
-                         hide_footer_bool=False,
+                         logout_button_name='Logout', hide_menu_bool=True,
+                         hide_footer_bool=True,
                          lottie_url='https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json')
 
 LOGGED_IN = __login__obj.build_login_ui()
