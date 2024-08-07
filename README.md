@@ -8,7 +8,7 @@ EduBot is your personalized AI-powered educational assistant, developed for the 
 
 ## 🌐 Live Demo
 
-Try EduBot now: [EduBot Live Demo](https://your-deployment-url-here.com)
+Try EduBot now: [EduBot Live Demo](https://edubot-ai.streamlit.app/)
 
 ## 🌟 Features
 
